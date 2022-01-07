@@ -54,11 +54,11 @@ public class OfficialWebsiteController {
         return "ai_art_tech-big_data.html";
     }
 
-    @RequestMapping("/ai_art-cat'sEye.html")
+    @RequestMapping("/ai_art_tech-cat'sEye.html")
     public String catsEyeWeb(Model model) {
         String[] filePathAry = getFilePathAry("/assets/images/作品/貓眼_cat'sEye/");
         model.addAttribute("filePathAry", filePathAry);
-        return "ai_art-cat'sEye.html";
+        return "ai_art_tech-cat'sEye.html";
     }
 
     @RequestMapping("/ai_art_tech-dancer.html")
@@ -117,6 +117,11 @@ public class OfficialWebsiteController {
     @RequestMapping("/buildingPage.html")
     public String buildingPage() {
         return "buildingPage.html";
+    }
+
+    @RequestMapping("/contact.html")
+    public String contactPage() {
+        return "contact.html";
     }
 
     @RequestMapping("/projects.html")
