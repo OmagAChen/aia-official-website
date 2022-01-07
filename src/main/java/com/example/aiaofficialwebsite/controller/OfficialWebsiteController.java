@@ -50,7 +50,9 @@ public class OfficialWebsiteController {
     }
 
     @RequestMapping("/ai_art_tech-big_data.html")
-    public String bigDataWeb() {
+    public String bigDataWeb(Model model) {
+        String[] filePathAry = getFilePathAry("/assets/images/作品/大數據_big_data/");
+        model.addAttribute("filePathAry", filePathAry);
         return "ai_art_tech-big_data.html";
     }
 
