@@ -14,7 +14,12 @@ public class OfficialWebsiteController {
 
     @RequestMapping("/")
     public String officialWeb() {
-        return "about";
+        return "main_page";
+    }
+
+    @RequestMapping("/main_page.html")
+    public String mainWeb() {
+        return "main_page.html";
     }
 
     @RequestMapping("/2021_ai_art_exhibition.html")
