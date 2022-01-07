@@ -27,6 +27,16 @@ public class OfficialWebsiteController {
         return "2021_ai_art_exhibition.html";
     }
 
+    @RequestMapping("/2020_ai_art_exhibition.html")
+    public String aiArtExhibition2020() {
+        return "2020_ai_art_exhibition.html";
+    }
+
+    @RequestMapping("/2017_ai_art_exhibition.html")
+    public String aiArtExhibition2017() {
+        return "2017_ai_art_exhibition.html";
+    }
+
     @RequestMapping("/about.html")
     public String aboutWeb() {
         return "about.html";
@@ -44,11 +54,45 @@ public class OfficialWebsiteController {
         return "ai_art_tech-big_data.html";
     }
 
+    @RequestMapping("/ai_art-cat'sEye.html")
+    public String catsEyeWeb(Model model) {
+        String[] filePathAry = getFilePathAry("/assets/images/作品/貓眼_cat'sEye/");
+        model.addAttribute("filePathAry", filePathAry);
+        return "ai_art-cat'sEye.html";
+    }
+
+    @RequestMapping("/ai_art_tech-dancer.html")
+    public String dancerWeb() {
+        return "ai_art_tech-dancer.html";
+    }
+
+    @RequestMapping("/ai_art_tech-digitalBlueAndWhitePorcelain.html")
+    public String digitalBlueAndWhitePorcelainWeb(Model model) {
+        String[] filePathAry = getFilePathAry("/assets/images/作品/數字青花_digitalBlueAndWhitePorcelain/");
+        model.addAttribute("filePathAry", filePathAry);
+        return "ai_art_tech-digitalBlueAndWhitePorcelain.html";
+    }
+
+    @RequestMapping("/ai_art_tech-emotionalMirror.html")
+    public String emotionalMirrorWeb() {
+        return "ai_art_tech-emotionalMirror.html";
+    }
+
     @RequestMapping("/ai_art_tech-fusion.html")
     public String fusionWeb(Model model) {
         String[] filePathAry = getFilePathAry("/assets/images/作品/融合_fusion/");
         model.addAttribute("filePathAry", filePathAry);
         return "ai_art_tech-fusion.html";
+    }
+
+    @RequestMapping("/ai_art_tech-landscapeAI.html")
+    public String landscapeAiWeb() {
+        return "ai_art_tech-landscapeAI.html";
+    }
+
+    @RequestMapping("/ai_art_tech-LineArtPortrait.html")
+    public String lineArtPortraitWeb() {
+        return "ai_art_tech-LineArtPortrait.html";
     }
 
     @RequestMapping("/ai_art_tech-painter.html")
@@ -61,6 +105,13 @@ public class OfficialWebsiteController {
     @RequestMapping("/ai_art_tech-rule.html")
     public String ruleWeb() {
         return "ai_art_tech-rule.html";
+    }
+
+    @RequestMapping("/ai_art_tech-videoSound.html")
+    public String videoSoundWeb(Model model) {
+        String[] filePathAry = getFilePathAry("/assets/images/作品/顯相環聲_videoSound/");
+        model.addAttribute("filePathAry", filePathAry);
+        return "ai_art_tech-videoSound.html";
     }
 
     @RequestMapping("/buildingPage.html")
