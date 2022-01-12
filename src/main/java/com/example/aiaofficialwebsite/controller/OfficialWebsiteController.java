@@ -1,13 +1,7 @@
 package com.example.aiaofficialwebsite.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
 
 @Controller
 public class OfficialWebsiteController {
