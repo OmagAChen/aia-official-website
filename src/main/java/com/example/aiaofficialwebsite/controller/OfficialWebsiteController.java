@@ -43,23 +43,17 @@ public class OfficialWebsiteController {
     }
 
     @RequestMapping("/ai_art-tech-poetry&painting.html")
-    public String poetryWeb(Model model) {
-        String[] filePathAry = getFilePathAry("/assets/images/作品/詩畫_poetry&painting/");
-        model.addAttribute("filePathAry", filePathAry);
+    public String poetryWeb() {
         return "ai_art-tech-poetry&painting.html";
     }
 
     @RequestMapping("/ai_art_tech-big_data.html")
-    public String bigDataWeb(Model model) {
-        String[] filePathAry = getFilePathAry("/assets/images/作品/大數據_big_data/");
-        model.addAttribute("filePathAry", filePathAry);
+    public String bigDataWeb() {
         return "ai_art_tech-big_data.html";
     }
 
     @RequestMapping("/ai_art_tech-cat'sEye.html")
-    public String catsEyeWeb(Model model) {
-        String[] filePathAry = getFilePathAry("/assets/images/作品/貓眼_cat'sEye/");
-        model.addAttribute("filePathAry", filePathAry);
+    public String catsEyeWeb() {
         return "ai_art_tech-cat'sEye.html";
     }
 
@@ -69,9 +63,7 @@ public class OfficialWebsiteController {
     }
 
     @RequestMapping("/ai_art_tech-digitalBlueAndWhitePorcelain.html")
-    public String digitalBlueAndWhitePorcelainWeb(Model model) {
-        String[] filePathAry = getFilePathAry("/assets/images/作品/數字青花_digitalBlueAndWhitePorcelain/");
-        model.addAttribute("filePathAry", filePathAry);
+    public String digitalBlueAndWhitePorcelainWeb() {
         return "ai_art_tech-digitalBlueAndWhitePorcelain.html";
     }
 
@@ -81,9 +73,7 @@ public class OfficialWebsiteController {
     }
 
     @RequestMapping("/ai_art_tech-fusion.html")
-    public String fusionWeb(Model model) {
-        String[] filePathAry = getFilePathAry("/assets/images/作品/融合_fusion/");
-        model.addAttribute("filePathAry", filePathAry);
+    public String fusionWeb() {
         return "ai_art_tech-fusion.html";
     }
 
@@ -98,9 +88,7 @@ public class OfficialWebsiteController {
     }
 
     @RequestMapping("/ai_art_tech-painter.html")
-    public String painterWeb(Model model) {
-        String[] filePathAry = getFilePathAry("/assets/images/作品/畫師_painter/");
-        model.addAttribute("filePathAry", filePathAry);
+    public String painterWeb() {
         return "ai_art_tech-painter.html";
     }
 
@@ -110,9 +98,7 @@ public class OfficialWebsiteController {
     }
 
     @RequestMapping("/ai_art_tech-videoSound.html")
-    public String videoSoundWeb(Model model) {
-        String[] filePathAry = getFilePathAry("/assets/images/作品/顯相環聲_videoSound/");
-        model.addAttribute("filePathAry", filePathAry);
+    public String videoSoundWeb() {
         return "ai_art_tech-videoSound.html";
     }
 
@@ -129,23 +115,5 @@ public class OfficialWebsiteController {
     @RequestMapping("/projects.html")
     public String projectsWeb() {
         return "projects.html";
-    }
-
-    public String[] getFilePathAry(String fileDir) {
-        String localPath = "";
-        ArrayList<String> filePathAry = new ArrayList<String>();
-        try {
-            localPath = ResourceUtils.getURL("classpath:").getPath() + "static" + fileDir;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        File file = new File(localPath);
-        File[] files = file.listFiles();
-        if (files != null) {
-            for (File value : files) {
-                filePathAry.add("." + fileDir + value.getName());
-            }
-        }
-        return filePathAry.toArray(new String[0]);
     }
 }
