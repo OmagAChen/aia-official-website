@@ -1,6 +1,6 @@
 server:
   #https端口号.
-  port: 80
+  port: 8080
   ssl:
     #证书的路径.
     key-store: classpath:keystore.p12
