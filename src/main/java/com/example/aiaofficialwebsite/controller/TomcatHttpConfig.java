@@ -53,7 +53,7 @@ public class TomcatHttpConfig {
         connector.setScheme("http");
         connector.setPort(8080);
         connector.setSecure(false);
-        connector.setRedirectPort(8080);
+        connector.setRedirectPort(80);
         return connector;
     }
 }
